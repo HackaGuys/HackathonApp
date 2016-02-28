@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/child1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight"/>
+
+    <TextView
+        android:id="@+id/child2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
+
+    <TextView
+        android:id="@+id/child3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
+
+    <TextView
+        android:id="@+id/child4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
+
+    <TextView
+        android:id="@+id/child5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
+
+    <TextView
+        android:id="@+id/child6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
+
+    <TextView
+        android:id="@+id/child7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
+
+    <TextView
+        android:id="@+id/child8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
+
+    <TextView
+        android:id="@+id/child9"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
+
+    <TextView
+        android:id="@+id/child10"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
+
+</LinearLayout>
