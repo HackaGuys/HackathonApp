@@ -6,13 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+    private Button getVenue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getVenue = (Button) findViewById(R.id.button_get_venue);
     }
 
     @Override
@@ -39,5 +42,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchPosting(View view) {
         startActivity(new Intent(this, PostingActivity.class));
+    }
+
+    public void getVenues(View view) {
+        /*
+        String url = Constants.VENUES_SEARCH + "?" + "client_id=" + Constants.CLIENT_ID +
+                "&client_secret=" + Constants.CLIENT_SECRET + "&v=" + Constants.VERSION +
+                "&ll=" + "40.7,-74";
+        JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, url,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d("RESPONSE", response.toString());
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }
+        );
+        Volley.newRequestQueue(this).add(getRequest);
+        */
+        startActivity(new Intent(this, VenueListViewActivity.class));
     }
 }

@@ -22,7 +22,7 @@ import java.util.Map;
 
 public class PostingActivity extends AppCompatActivity {
     private ProgressDialog progress;
-    private EditText city, address, province;
+    private EditText city, address, province, zip, price, bedrooms, sqfeet, description;
     private final int RESULT_LOAD_IMAGE = 1;
 
     @Override
@@ -36,6 +36,11 @@ public class PostingActivity extends AppCompatActivity {
         address = (EditText) findViewById(R.id.edit_address);
         city = (EditText) findViewById(R.id.edit_city);
         province = (EditText) findViewById(R.id.edit_province);
+        zip = (EditText) findViewById(R.id.edit_zip_code);
+        price = (EditText) findViewById(R.id.edit_price);
+        bedrooms = (EditText) findViewById(R.id.edit_bedrooms);
+        sqfeet = (EditText) findViewById(R.id.edit_sqfeet);
+        description = (EditText) findViewById(R.id.edit_description);
     }
 
     @Override
@@ -44,26 +49,14 @@ public class PostingActivity extends AppCompatActivity {
 
         if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
             Uri selectedImage = data.getData();
-
-            /*
-            String[] filePathColumn = { MediaStore.Images.Media.DATA };
-
-            Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
-            cursor.moveToFirst();
-
-            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-            String picturePath = cursor.getString(columnIndex);
-            cursor.close();
-            */
             ImageView imageView = (ImageView) findViewById(R.id.img);
             imageView.setImageURI(selectedImage);
-            // imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
         }
     }
 
     public void sendPosting(View view) {
         progress.show();
-        String url = Constants.URL + "";
+        String url = Constants.URL + "api/posts";
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -95,6 +88,11 @@ public class PostingActivity extends AppCompatActivity {
                 params.put("address", address.getText().toString());
                 params.put("city", city.getText().toString());
                 params.put("province", province.getText().toString());
+                params.put("zip", zip.getText().toString());
+                params.put("price", price.getText().toString());
+                params.put("bedrooms", bedrooms.getText().toString());
+                params.put("sqfeet", sqfeet.getText().toString());
+                params.put("description", description.getText().toString());
                 params.put("Content-Type","application/json");
                 return params;
             }
