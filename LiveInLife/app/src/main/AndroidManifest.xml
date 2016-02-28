@@ -21,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PostingActivity" />
-        <activity android:name=".VenueListViewActivity"></activity>
+        <activity android:name=".VenueListViewActivity" />
+        <activity android:name=".CityInfoActivity"></activity>
     </application>
 
 </manifest>

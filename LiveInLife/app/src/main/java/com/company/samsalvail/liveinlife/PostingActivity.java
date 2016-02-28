@@ -34,7 +34,7 @@ public class PostingActivity extends AppCompatActivity {
         progress.setMessage("Making the Posting...");
 
         address = (EditText) findViewById(R.id.edit_address);
-        city = (EditText) findViewById(R.id.edit_city);
+        city = (EditText) findViewById(R.id.edit_enter_city);
         province = (EditText) findViewById(R.id.edit_province);
         zip = (EditText) findViewById(R.id.edit_zip_code);
         price = (EditText) findViewById(R.id.edit_price);
@@ -73,7 +73,7 @@ public class PostingActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         progress.dismiss();
                         Log.d("PostingActivity", "failed to make posting");
-                        Toast.makeText(PostingActivity.this, "failed to make posting",
+                        Toast.makeText(PostingActivity.this, "Please ensure all fields are filled out and try again.",
                                 Toast.LENGTH_LONG).show();
                     }
                 }

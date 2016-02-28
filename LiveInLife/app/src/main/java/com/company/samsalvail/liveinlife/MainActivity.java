@@ -2,13 +2,14 @@ package com.company.samsalvail.liveinlife;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements EnterCityDialog.EnterCityDialogListener {
     private Button getVenue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,26 +46,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getVenues(View view) {
-        /*
-        String url = Constants.VENUES_SEARCH + "?" + "client_id=" + Constants.CLIENT_ID +
-                "&client_secret=" + Constants.CLIENT_SECRET + "&v=" + Constants.VERSION +
-                "&ll=" + "40.7,-74";
-        JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, url,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Log.d("RESPONSE", response.toString());
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
+        FragmentManager fm = getSupportFragmentManager();
+        EnterCityDialog enterCityDialog = EnterCityDialog.newInstance("Enter the City");
+        enterCityDialog.show(fm, "fragment_enter_city");
+        // startActivity(new Intent(this, VenueListViewActivity.class));
+    }
 
-                    }
-                }
-        );
-        Volley.newRequestQueue(this).add(getRequest);
-        */
-        startActivity(new Intent(this, VenueListViewActivity.class));
+    @Override
+    public void onFinishEditDialog(String inputText) {
+        Intent i = new Intent(this, CityInfoActivity.class);
+        i.putExtra("city", inputText.trim());
+        startActivity(i);
     }
 }

@@ -7,90 +7,100 @@
         android:id="@+id/child1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff"/>
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight"/>
 
     <TextView
         android:id="@+id/child2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
 
     <TextView
         android:id="@+id/child3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
 
     <TextView
         android:id="@+id/child4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
 
     <TextView
         android:id="@+id/child5"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
 
     <TextView
         android:id="@+id/child6"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
 
     <TextView
         android:id="@+id/child7"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
 
     <TextView
         android:id="@+id/child8"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
 
     <TextView
         android:id="@+id/child9"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
 
     <TextView
         android:id="@+id/child10"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
+        android:textSize="@dimen/text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#0000ff" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:textColor="@color/colorLight" />
 
 </LinearLayout>

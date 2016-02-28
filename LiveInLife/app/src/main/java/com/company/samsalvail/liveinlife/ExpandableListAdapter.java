@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,12 +17,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private List<HashMap<String, String>> listDataGroup; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> listDataChild;
+    private int lastExpandedGroupPosition = -1;
+    private ExpandableListView expandableListView;
 
     public ExpandableListAdapter(Context context, List<HashMap<String, String>> listDataGroup,
-                                 HashMap<String, List<String>> listChildData) {
+                                 HashMap<String, List<String>> listChildData, ExpandableListView expandableListView) {
         this.context = context;
         this.listDataGroup = listDataGroup;
         this.listDataChild = listChildData;
+        this.expandableListView = expandableListView;
     }
 
     @Override
@@ -106,10 +110,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         TextView address = (TextView) convertView.findViewById(R.id.text_address);
         TextView city = (TextView) convertView.findViewById(R.id.text_city);
         TextView province = (TextView) convertView.findViewById(R.id.text_province);
+        TextView price = (TextView) convertView.findViewById(R.id.text_price);
 
         address.setText(group.get("address"));
-        city.setText(group.get("city"));
+        city.setText(group.get("city") + ", ");
         province.setText(group.get("province"));
+        price.setText("$" + group.get("price"));
 
         return convertView;
     }
@@ -122,5 +128,17 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
+    }
+
+    @Override
+    public void onGroupExpanded(int groupPosition){
+        //collapse the old expanded group, if not the same
+        //as new group to expand
+        if(groupPosition != lastExpandedGroupPosition){
+            expandableListView.collapseGroup(lastExpandedGroupPosition);
+        }
+
+        super.onGroupExpanded(groupPosition);
+        lastExpandedGroupPosition = groupPosition;
     }
 }
